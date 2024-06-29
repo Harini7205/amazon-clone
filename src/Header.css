@@ -1,0 +1,128 @@
+.header{
+    background-color:rgb(15,17,17);
+    height:60px;
+    z-index:2;
+    position:sticky;
+    top:0;
+    display:flex;
+    align-items:center;
+}
+.header_logo{
+    width:100px;
+    margin-top:18px;
+    margin-left:20px;
+    object-fit:contain;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:3px;
+}
+.logo_attach{
+    font-size:14px;
+    margin-right:20px;
+    color:white;
+}
+.location_icon{
+    color:white;
+}
+.delivery_loc{
+    display:flex;
+    align-items:center;
+    margin-right:10px;
+}
+.header_search{
+    display:flex;
+    flex:1;
+    align-items:center;
+}
+.header_input{
+    height:20px;
+    padding:10px;
+    border:none;
+    width:100%;
+    border-radius:8px 0 0 8px;
+    font-size:15px;
+}
+.search_icon{
+    height:30px !important;
+    padding:5px;
+    background-color:#cd9042;
+    border-radius:0 8px 8px 0;
+}
+.header_nav{
+    margin-left:10px;
+    margin-right:10px;
+    display:flex;
+    gap:0;
+}
+.language-option{
+    display:flex;
+    justify-content:space-around;
+    gap:4px;
+    align-items:center;
+    padding:10px 8px;
+    color:white;
+}
+.language-option p{
+    font-weight:500;
+    font-size:14px;
+    margin:0;
+    padding:0;
+}
+.india-flag{
+    height:14px;
+    width:20px;
+}
+.dropdown{
+    font-size:14px;
+    color:white;
+    margin:5px 0 0 -8px;
+    align-self:flex-end;
+    color:grey;
+}
+.header_option{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    color:white;
+    padding:10px 8px;
+}
+.text1{
+    font-size:10px;
+    margin:0;
+    padding:0;
+}
+.text2{
+    font-size:14px;
+    font-weight:700;
+    margin:0;
+    padding:0;
+}
+.header_option_basket{
+    display:flex;
+    flex-direction: column;
+    color:white;
+    align-items:flex-start;
+    padding:5px 8px 5px 8px;
+}
+.shopping_basket_count{
+    margin-left:6px;
+    margin-right:10px;
+    color:#cd9042;
+    font-size:14px;
+    font-weight:700;
+}
+.t2{
+    display:flex;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+}
+.t2 .shopping_basket{
+    font-size:20px;
+}
+.bordered:hover{
+    border-radius:3px;
+    border:1px solid white;
+}

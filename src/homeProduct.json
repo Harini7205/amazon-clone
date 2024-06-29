@@ -1,0 +1,101 @@
+{
+    "products":[
+        {
+            "itemTitle":"Appliances for your home | Up to 55% off",
+            "imgs":[
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg"
+            ],
+            "subtitles":[
+                "Air conditioners",
+                "Refrigerators",
+                "Microwaves",
+                "Washing machines"
+            ],
+            "next":"See more"
+        },
+        {
+            "itemTitle":"Revamp your home in style",
+            "imgs":[
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_decor_1._SY116_CB555624324_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg"
+            ],
+            "subtitles":[
+                "Cushion covers, bedsheets & more",
+                "Figurines, vases & more",
+                "Home storage",
+                "Lighting solutions"
+            ],
+            "next":"Explore all"
+        },
+        {
+            "itemTitle":"Starting ₹149 | Bestseling earbuds, headphones & more",
+            "imgs":[
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Zeb_0.5x._SY116_CB553870684_.jpg"
+            ],
+            "subtitles":[
+                "Starting ₹249 | boAt",
+                "Starting ₹349 | boult",
+                "Starting ₹649 | noise",
+                "Starting ₹149 | Zebronics"
+            ],
+            "next":"See all offers"
+        },
+        {
+            "itemTitle":"Bestsellers | Up to 60% off",
+            "imgs":[
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/June/BTF/17th/Shoes-low._SY116_CB555280724_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/June/BTF/17th/pcqc2-3-low._SY116_CB555273362_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/June/BTF/17th/Pcqc2-4-low._SY116_CB555273362_.jpg",
+                "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/June/BTF/17th/Pcqc-2-2-low._SY116_CB555273362_.jpg"
+            ],
+            "subtitles":[
+                "Sports shoes",
+                "Jewellery & accessories",
+                "Watches & smartwatches",
+                "Bags,wallet and luggages"
+            ],
+            "next":"See all offers"
+        },
+        {
+            "itemTitle":"Best Sellers in Toys & Games",
+            "imgs":[
+                "https://m.media-amazon.com/images/I/71ICPSc3H+L._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/71flpMokoIL._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/61sWynCeb2L._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/71FDM6zmNdL._AC_SY170_.jpg"
+            ],
+            "subtitles":[
+                "",
+                "",
+                "",
+                ""
+            ],
+            "next":""
+        },
+        {
+            "itemTitle":"Best Sellers in Sports, Fitness & Outdoors",
+            "imgs":[
+                "https://m.media-amazon.com/images/I/81feGML0NAL._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/51+b9IWWbjL._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/61Av1lptLkL._AC_SY170_.jpg",
+                "https://m.media-amazon.com/images/I/61Mg9eVK0HL._AC_SY170_.jpg"
+            ],
+            "subtitles":[
+                "",
+                "",
+                "",
+                ""
+            ],
+            "next":""
+        }
+    ]
+}
+

@@ -1,0 +1,33 @@
+.carousel {
+  position: relative;
+  margin: auto;
+}
+.carousel-content {
+  display: flex;
+} 
+.carousel-item {
+  width:100%;
+} 
+.carousel-item.hidden {
+  display:none;
+} 
+.carousel-button {
+  position: absolute;
+  top: 20%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+} 
+.carousel-button.left {
+  left: 10px;
+  z-index:2;
+}
+.carousel-button.right {
+  right: 10px;
+}
+.carousel img {
+  width: 100%;
+  display: block;
+}
+
+  
