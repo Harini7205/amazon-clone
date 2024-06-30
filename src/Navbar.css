@@ -1,11 +1,10 @@
 .navbar{
     display:flex;
-    gap:14px;
     background-color:rgb(35,47,62);
     color:white;
     font-size:15px;
     font-weight:500;
-    padding:12px 0 12px 15px;
+    padding:5px 4px;
 }
 .hamburger{
     color:white;
@@ -14,7 +13,14 @@
 .option{
     display:flex;
     justify-content:center;
+    padding: 8px 7px;
 }
 .option:first-child{
     font-weight:600;
+}
+.bordered{
+    &:hover{
+        border:solid white 1px;
+        cursor:pointer;
+    }
 }

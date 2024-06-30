@@ -5,18 +5,11 @@ import Product from './Product';
 import Carousel from './Carousel';
 
 function Home() {
-  const images=[
-    "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg",
-    "https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/June/GW/Hero/V1/V2/BucketsMugsPC-V1._CB553693039_.jpg",
-    "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/Makeup-PCfdfo._CB554430294_.jpg",
-    "https://images-eu.ssl-images-amazon.com/images/G/31/BISS_2024/GW_heros_June24/PC_june/3000x1200_PC_2._CB554379545_.jpg",
-    "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg"
-  ];
+  
   return (
-    <div className="home">
+    <div className="home background">
       <div className="home-container">
-        <Carousel images={images}/>
-        <div className="background"></div>
+        <Carousel />
         <div className="product-container">
           {
             productdet.products.map((item,index)=>{
@@ -47,6 +40,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <img src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/3a04a81b-bafd-4f7c-8d08-0b26e5870ce3.jpeg" alt="ad" className="image-ad"/>
     </div>
   )
 }

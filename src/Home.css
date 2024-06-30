@@ -1,6 +1,10 @@
+body{
+    background-color:#e7ddff;
+}
 .home{
     width:100% !important;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     margin:0 auto;
 }
@@ -84,7 +88,6 @@
     background-color:red;
     color:white;
 }
-.background{
-    min-height:100vh;
-    background-color:#e7ddff;
+.image-ad{
+    margin:550px auto 30px auto;
 }

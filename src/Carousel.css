@@ -27,7 +27,8 @@
 }
 .carousel img {
   width: 100%;
-  display: block;
+  z-index:-1;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 
   
