@@ -49,7 +49,7 @@ body{
 .unique-product h2{
     text-align:left;
 }
-.unique-product button{
+.unique-product .yellow-button{
     background-color:rgb(255,216,20);
     border:none;
     outline:none;

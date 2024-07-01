@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import {Link} from "react-router-dom";
 
 function Header() {
   return (
@@ -38,10 +39,12 @@ function Header() {
             <p className="text1">Returns</p>
             <p className="text2">& Orders</p>
         </div>
+        <Link to="/cart">
         <div className="header_option_basket bordered">
             <p className="shopping_basket_count t1">0</p>
             <p className="t2"><ShoppingCartIcon className="shopping_basket" /> Cart</p>
         </div>
+        </Link>
       </div>
     </div>
   )

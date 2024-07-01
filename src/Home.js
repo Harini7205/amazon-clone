@@ -29,7 +29,7 @@ function Home() {
           <div className="last-product">
             <div className="unique-product">
               <h2 className="sign-in">Sign in for your best experience</h2>
-              <button className="prod-signin">Sign in securely</button>
+              <button className="prod-signin yellow-button">Sign in securely</button>
             </div>
             <div className="ad">
               <img src="https://m.media-amazon.com/images/I/81KqMk8EN6L._SY695_.jpg" alt="ad" className="ad-img"></img>
