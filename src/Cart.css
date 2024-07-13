@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding:0;
+}
 .cart-page{
     width:100%;
     display:flex;
@@ -8,7 +12,7 @@
     flex-direction: column;
     margin-right:90px;
 }
-.cart-top-left{
+.cart-top-left.empty{
     width:100%;
     background-color: white;
     display:flex;
@@ -16,7 +20,25 @@
     margin:20px 0 20px 20px;
     padding:60px 30px 30px 30px;
 }
-.cart-top-left img{
+.cart-top-left.notempty{
+    width:100%;
+    background-color: white;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin:20px 0 20px 20px;
+    padding:20px 30px 30px 30px;
+}
+.notempty h2{
+    font-weight:500;
+    font-size:32px;
+}
+.notempty h4{
+    font-weight:400;
+    font-size:18px;
+    padding-bottom:20px;
+} 
+.cart-top-left.empty img{
     width:350px;
 }
 .cart-top-left .empty-cart{
@@ -62,59 +84,52 @@
     text-align:left;
     padding:20px;
 }
-.cart-right{
-    width:18%;
+.cart-right.empty{
+    background-color: white;
     margin:20px 20px 20px 0;
-    background-color:white;
     border-radius:6px;
     padding:15px;
+}
+.cart-right{
+    width:18%;
+}
+.subtotal{
+    background-color: white;
+    padding:20px;
+    margin:20px 20px 20px 0;
+    border-radius:6px;
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+}
+.subtotal small{
+    display:flex;
+    gap:10px;
+}
+.subtotal button{
+    align-self:center;
+    padding-left:50px;
+    padding-right:50px;
 }
 .cart-right h3{
     text-align:left;
     margin-bottom:10px;
+}
+.cart-right-bottom{
+    background-color: white;
+    margin:20px 20px 20px 0;
+    border-radius:6px;
+    padding:15px;
 }
 .list-product{
     display:flex;
     flex-direction:column;
     gap:10px;
 }
-.recc-prod{
+.basket-items{
     display:flex;
-    gap:20px;
-}
-.imgrecc{
-    height:120px;
-    width:100px;
-}
-.prod-right{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-}
-.rp-item-title{
-    text-align:left;
-    color:rgb(0,113,133);
-    height:40px;
-    object-fit: contain;
-    overflow: hidden;
-}
-.rp-rating-review{
-    display:flex;
-    justify-content:start;
-    align-items:center;
-    gap:5px;
-    font-size:18px;
-    color:rgb(0,113,133);
-}
-.rp-review{
-    font-size:13px;
-}
-.rp-rate{
-    color:red;
-}
-.recc-prod .yellow-button{
-    margin-top:3px;
-    padding:6px;
-    font-size:11px;
-    border-radius:10px;
+    flex-direction: column;
+    gap:30px;
 }

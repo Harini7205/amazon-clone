@@ -1,23 +1,32 @@
 import React from 'react'
+import StarRating from './StarRating';
+import { useStateValue } from './stateProvider';
 import './Product.css';
 
-function Product({heading,images,subtitles,next}) {
+function Product({id,title,image,rate,rating,reviews}) {
+  const [{basket},dispatch]=useStateValue(); 
+  console.log('this is the basket',basket);
+  const addToCart= ()=>{
+    dispatch({
+      type:'ADD_TO_CART',
+      item:{
+        id:id,
+        title:title,
+        image:image,
+        price:rate,
+        rating:rating
+      },
+    });
+  };
   return (
-    <div className="product">
-      <h2 className="catchy-text">{heading}</h2>
-      <div className="image-container">
-            {
-              images.map((item,index)=>{
-                return (
-                  <div className="image-with-text">
-                    <img src={item} alt={"image"+index} className="product-image"/>
-                    <p>{subtitles[index]}</p>
-                  </div>
-                );
-              })
-            }
-      </div>
-      <a href="#home" className="next">{next}</a>
+    <div className="recc-prod">
+        <img src={image} alt="imgrecc" className="imgrecc"/>
+          <div className="prod-right">
+            <p className="rp-item-title">{title}</p>
+            <p className="rp-rating-review"><StarRating rating={rating}/></p>
+            <p className="rp-rate">₹{rate}</p>
+            <button className="yellow-button" onClick={addToCart}>Add to cart</button>
+          </div>
     </div>
   )
 }

@@ -1,48 +1,93 @@
 import React from 'react';
 import './Cart.css';
-import StarRating from './StarRating';
+import Product from './Product';
 import recentProducts from './recentHistory.json';
+import { useStateValue } from './stateProvider';
+import { getBasketTotal } from './reducer';
+import CurrencyFormat from "react-currency-format";
+import BasketItem from './BasketItem';
 
 function Cart() {
+  const [{basket}]=useStateValue();
+  console.log('Basket:', basket);
+  console.log('Total:', getBasketTotal(basket));
+  const isCartEmpty=(basket.length===0);
   return (
     <div className="cart-page">
       <div className="cart-left">
-      <div className="cart-top-left">
-        <img src="https://m.media-amazon.com/images/G/31/cart/empty/kettle-desaturated._CB424694257_.svg" alt="cart-page-img" />
-        <div className="empty-cart">
-          <h2>Your Amazon Cart is empty</h2>
-          <p className="blue-subtitle">Shop today's deals</p>
-          <div className="buttons">
-            <button className="prod-signin yellow-button">Sign In to Your Account</button>
-            <button className="prod-signup white-button">Sign Up Now</button>
+        {isCartEmpty?(
+          <div className="cart-top-left empty">
+          <img src="https://m.media-amazon.com/images/G/31/cart/empty/kettle-desaturated._CB424694257_.svg" alt="cart-page-img" />
+          <div className="empty-cart">
+            <h2>Your Amazon Cart is empty</h2>
+            <p className="blue-subtitle">Shop today's deals</p>
+            <div className="buttons">
+              <button className="prod-signin yellow-button">Sign In to Your Account</button>
+              <button className="prod-signup white-button">Sign Up Now</button>
+            </div>
           </div>
-        </div>
-      </div>
+          </div>
+        ):
+          <div className="cart-top-left notempty">
+            <h2>Shopping Cart</h2>
+            <h4>{basket.length} {basket.length>1?'items':'item'}</h4>
+            {basket.map((item) => (
+                <div className="basket-items">
+                  <BasketItem id={item.id} image={item.image} title={item.title} rate={item.price} rating={item.rating} />
+                </div>              
+            ))}
+          </div>
+        }
       <div className="cart-bottom-left"></div>
       <div className="cautionary-text">
         <p>The price and availability of items at Amazon.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.</p>
         <p>Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
       </div>
       </div>
-      <div className="cart-right">
-        <h3>Customers who bought items in your Recent History also bought</h3>
-        <div className="list-product">
-          {
-            recentProducts.products.map((item,index)=>{
-              return <div className="recc-prod">
-                <img src={item.img} alt="imgrecc" className="imgrecc"/>
-                <div className="prod-right">
-                  <p className="rp-item-title">{item.title}</p>
-                  <p className="rp-rating-review"><StarRating rating={item.rating}/> <span className="rp-review">{item.reviews}</span></p>
-                  <p className="rp-rate">{item.rate}</p>
-                  <button className="yellow-button">Add to cart</button>
-                </div>
-              </div>
-            })
-          }
-          
-        </div>
-      </div>
+        {isCartEmpty?
+        (
+          <div className="cart-right empty">
+            <h3>Customers who bought items in your Recent History also bought</h3>
+          <div className="list-product">
+            {
+              recentProducts.products.map((item,index)=>{
+                return <Product image={item.img} rate={item.rate} rating={item.rating} reviews={item.reviews} title={item.title} id={item.id} />
+              })
+            }
+          </div>
+          </div>
+        ):
+        (
+          <div className="cart-right">
+            <div className="subtotal">
+              <CurrencyFormat 
+                renderText={(value)=>(
+                  <>
+                  <p>Subtotal ({basket.length} {basket.length>1?'items':'item'}): <strong>{value}</strong></p>
+                  <small><input type="checkbox" />This order contains a gift</small>
+                  </>
+                )}
+                decimalScale={2}
+                value={getBasketTotal(basket)}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix={'₹'}
+              />
+              <button className="yellow-button">Proceed to Buy</button>
+            </div>
+            <div className='cart-right-bottom'>
+            <h3>Customers who bought items in your Recent History also bought</h3>
+            <div className="list-product">  
+              {
+                recentProducts.products.map((item,index)=>{
+                  return <Product image={item.img} rate={item.rate} rating={item.rating} reviews={item.reviews} title={item.title} id={item.id} />
+                })
+              }
+            </div>
+            </div>
+          </div>
+        )
+        }
     </div>
   )
 }

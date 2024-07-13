@@ -1,53 +1,53 @@
 {
     "products":[
         {
+            "id":1,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/511YqaPJA8L._AC_UL200_SR200,200_.jpg",
             "title":"Sulfar Washing Strainer-Wash Basin Storage Organizer Rack",
             "rating":3,
-            "reviews":2300,
-            "rate":"₹169.00"
+            "rate":"169.00"
         },
         {
+            "id":2,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/71R8GV2pxaL._AC_UL200_SR200,200_.jpg",
             "title":"GOLWYN Soap Dispenser for Kitchen Accessories Items Dish Utensiles (450 ML)",
             "rating":4,
-            "reviews":5411,
-            "rate":"₹194.00"
+            "rate":"194.50"
         },
         {
+            "id":3,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/41RwdelrdSL._AC_UL200_SR200,200_.jpg",
             "title":"Black Olive 4-Slot Kitchen Cooking Utensil Stand-Multifunction Kitchen Cooking Utensil Plastic Stand Holder Pot Clips Support Spoon Stove Organizer Tool Pan Cover Lid Rack",
             "rating":3,
-            "reviews":444,
-            "rate":"₹146.00"
+            "rate":"146.00"
         },
         {
+            "id":4,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/71eskuZCmtL._AC_UL200_SR200,200_.jpg",
             "title":"LEAWALL Cabinet Door Kitchen Towel Bar Towel BAR/Kitchen Hook Drawer Storage Adjustable Over Cabinet Stainless Steel Towel Bar/Towel Holder/Over Cabinet Towel bar(11 INCH,28 CM)",
             "rating":2,
-            "reviews":15,
-            "rate":"₹259.00"
+            "rate":"259.00"
         },
         {
+            "id":5,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/51BgScyg2qL._AC_UL200_SR200,200_.jpg",
             "title":"Pigeon by Stovekraft Angular Holder Shears Kitchen Knifes 6 Piece Set with Wooden Block (Stainless Steel)",
             "rating":4,
-            "reviews":18761,
-            "rate":"₹369.00"
+            "rate":"369.00"
         },
         {
+            "id":6,
             "img":"https://images-eu.ssl-images-amazon.com/images/I/41Oinc187fL._AC_UL200_SR200,200_.jpg",
             "title":"Clazkit Food Strainer Colander, Fruit Basket, Pasta Strainer, Vegetable Strainer, Kitchen Sieve, Washing Bowl, Unbreakable, (Color May Vary), Plastic, 10 x 10 x 10 millimeters",
             "rating":5,
-            "reviews":3944,
-            "rate":"₹79.00"
+            "rate":"79.00"
         },
         {
+            "id":7,
             "img":"https://m.media-amazon.com/images/I/71TwPiqclRL._SX679_.jpg",
             "title":"GOLWYN Air Tight Containers For Kitchen Storage Set, Bpa Container For Kitchen Storage Set, Kitchen Organizer And Kitchen Accessories Items & Storage(1100 Ml Set Of 8)(Plastic)",
             "rating":3,
-            "reviews":35123,
-            "rate":"₹873.00"
+            "rate":"873.00"
         }
     ]
 }

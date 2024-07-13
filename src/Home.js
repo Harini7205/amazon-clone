@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css';
 import productdet from './homeProduct.json';
-import Product from './Product';
+import Component from './Component';
 import Carousel from './Carousel';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
         <div className="product-container">
           {
             productdet.products.map((item,index)=>{
-              return <Product 
+              return <Component
               heading={item.itemTitle}
               images={item.imgs}
               subtitles={item.subtitles}

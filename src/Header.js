@@ -6,8 +6,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {Link} from "react-router-dom";
+import { useStateValue } from './stateProvider';
 
 function Header() {
+  const [{basket},]=useStateValue();
   return (
     <div className="header">
       <div className="logo bordered">
@@ -41,7 +43,7 @@ function Header() {
         </div>
         <Link to="/cart">
         <div className="header_option_basket bordered">
-            <p className="shopping_basket_count t1">0</p>
+            <p className="shopping_basket_count t1">{basket?.length}</p>
             <p className="t2"><ShoppingCartIcon className="shopping_basket" /> Cart</p>
         </div>
         </Link>
