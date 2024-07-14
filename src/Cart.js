@@ -4,14 +4,23 @@ import Product from './Product';
 import recentProducts from './recentHistory.json';
 import { useStateValue } from './stateProvider';
 import { getBasketTotal } from './reducer';
-import CurrencyFormat from "react-currency-format";
 import BasketItem from './BasketItem';
+
+function formatCurrency(value) {
+  const numberValue = parseFloat(value);
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    minimumFractionDigits: 2,
+  }).format(numberValue);
+}
 
 function Cart() {
   const [{basket}]=useStateValue();
   console.log('Basket:', basket);
   console.log('Total:', getBasketTotal(basket));
   const isCartEmpty=(basket.length===0);
+  const formattedValue = formatCurrency(getBasketTotal(basket));
   return (
     <div className="cart-page">
       <div className="cart-left">
@@ -60,19 +69,8 @@ function Cart() {
         (
           <div className="cart-right">
             <div className="subtotal">
-              <CurrencyFormat 
-                renderText={(value)=>(
-                  <>
-                  <p>Subtotal ({basket.length} {basket.length>1?'items':'item'}): <strong>{value}</strong></p>
-                  <small><input type="checkbox" />This order contains a gift</small>
-                  </>
-                )}
-                decimalScale={2}
-                value={getBasketTotal(basket)}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={'₹'}
-              />
+              <p>Subtotal ({basket.length} {basket.length > 1 ? 'items' : 'item'}): <strong>{formattedValue}</strong></p>
+              <small><input type="checkbox" />This order contains a gift</small>
               <button className="yellow-button">Proceed to Buy</button>
             </div>
             <div className='cart-right-bottom'>

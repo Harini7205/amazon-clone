@@ -7,9 +7,16 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {Link} from "react-router-dom";
 import { useStateValue } from './stateProvider';
+import {auth} from './firebase';
+
 
 function Header() {
-  const [{basket},]=useStateValue();
+  const [{basket,user},]=useStateValue();
+  const handleAuthentication=()=>{
+    if (user){
+      auth.signOut();
+    }
+  }
   return (
     <div className="header">
       <div className="logo bordered">
@@ -18,7 +25,7 @@ function Header() {
       </div>
       <div className="delivery_loc bordered">
         <LocationOnIcon className="location_icon"/>
-        <div class="header_option">
+        <div className="header_option">
           <p className="text1">Delivering to Mumbai 400001</p>
           <p className="text2">Update location</p>
         </div>
@@ -33,10 +40,12 @@ function Header() {
           <p>EN</p>
           <ArrowDropDownIcon className="dropdown"/>
         </div>
-        <div className="header_option bordered">
-            <p className="text1">Hello, sign in</p>
+        <Link to={!user && "/login"}>
+        <div onClick={handleAuthentication} className="header_option bordered">
+            <p className="text1">Hello, {user?"sign out": "sign in"}</p>
             <p className="text2">Accounts & Lists</p>
         </div>
+        </Link>
         <div className="header_option bordered">
             <p className="text1">Returns</p>
             <p className="text2">& Orders</p>

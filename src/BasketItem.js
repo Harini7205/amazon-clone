@@ -4,7 +4,7 @@ import StarRating from './StarRating';
 import { useStateValue } from './stateProvider';
 
 function BasketItem({id,image,title,rating,rate}) {
-    const [{basket},dispatch]=useStateValue();
+    const [,dispatch]=useStateValue();
     const removeFromCart=()=>{
         dispatch({
             type:'REMOVE_FROM_CART',

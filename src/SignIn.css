@@ -1,0 +1,82 @@
+.sign-in{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sign-in-logo{
+    width:120px;
+    height:80px;
+}
+.login-details{
+    margin:20px;
+    margin-top:0;
+    padding:30px 30px 10px 30px;
+    border:0.5px solid lightgray;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.login-details p{
+    margin-bottom:10px;
+    font-size:14px;
+    font-weight:600;
+}
+.login-details p:first-child{
+    font-size:20px;
+    font-weight:500;
+}
+.input-field-login{
+    height:30px;
+    width:320px;
+    border-radius: 10px;
+    border:1px solid grey;
+    margin-bottom:10px;
+    padding-left:10px;
+}
+.login-details .sign-in-yellow-button{
+    background-color:rgb(255,216,20);
+    border:none;
+    outline:none;
+    font-size:14px;
+    border-radius:8px;
+    padding:8px 80px;
+    align-self:center;
+    margin:10px 0;
+    &:hover{
+        cursor:pointer;
+    }
+}
+.login-details .caution{
+    width:340px;
+    text-align: left;
+    font-weight:400;
+    font-size:12px;
+}
+.caution span{
+    color:rgb(0,113,113);
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+.signin-copyright{
+    background-color: white;
+    padding:20px;
+}
+.signin-copyright-options{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    color:rgb(0,113,113);
+}
+.signin-copyright p{
+    text-align:center;
+    font-size:12px;
+    margin-bottom:5px;
+}
+.login-details .grey{
+    background-color: lightgray;
+    margin-top: 0;
+}
