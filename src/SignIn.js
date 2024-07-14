@@ -51,7 +51,7 @@ function SignIn() {
             <p>Privacy Notice</p>
             <p>Interest Based Ads</p>
         </div>
-        <p className='sign-in-copyright-text'>&#169; July 2024 Amazon.inc or its affliates</p>
+        <p className='sign-in-copyright-text'>&#169; July 2024 Harini</p>
       </div>
     </div>
   )

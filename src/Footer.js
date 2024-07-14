@@ -48,7 +48,7 @@ function Footer() {
             <p>Privacy Notice</p>
             <p>Interest Based Ads</p>
         </div>
-        <p className='copyright-text'>&#169; July 2024 Amazon.inc or its affliates</p>
+        <p className='copyright-text'>&#169; July 2024 Harini</p>
       </div>
     </div>
     
