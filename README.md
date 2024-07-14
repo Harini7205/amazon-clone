@@ -18,10 +18,7 @@ View the website here: [Amazon Clone](https://clone-fa401.web.app/)
 ## Features
 
 - User Authentication with Firebase
-- Product Listings with dynamic rendering
 - Shopping Cart functionality
-- Responsive design for various devices
-- Real-time updates and state management with React
 
 ## Technologies Used
 
