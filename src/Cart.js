@@ -40,11 +40,11 @@ function Cart() {
           <div className="cart-top-left notempty">
             <h2>Shopping Cart</h2>
             <h4>{basket.length} {basket.length>1?'items':'item'}</h4>
+            <div className="basket-items">
             {basket.map((item) => (
-                <div className="basket-items">
                   <BasketItem id={item.id} image={item.image} title={item.title} rate={item.price} rating={item.rating} />
-                </div>              
             ))}
+            </div> 
           </div>
         }
       <div className="cart-bottom-left"></div>

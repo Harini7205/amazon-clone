@@ -1,9 +1,9 @@
 .recc-prod{
     display:flex;
     gap:20px;
+    height:130px;
 }
 .imgrecc{
-    height:120px;
     width:100px;
 }
 .prod-right{
@@ -14,7 +14,7 @@
 .rp-item-title{
     text-align:left;
     color:rgb(0,113,133);
-    height:40px;
+    max-height:40px;
     object-fit: contain;
     overflow: hidden;
 }
