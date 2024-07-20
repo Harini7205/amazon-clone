@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles/Cart.css';
-import Product from '../Product';
-import recentProducts from '../recentHistory.json';
+import '../styles/Cart.css';
+import Product from './Product';
+import recentProducts from '../data/recentHistory.json';
 import { useStateValue } from '../config/stateProvider';
 import { getBasketTotal } from '../config/reducer';
 import BasketItem from './BasketItem';

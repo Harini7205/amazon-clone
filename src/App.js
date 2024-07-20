@@ -1,15 +1,15 @@
 import './styles/App.css';
-import Header from './Header';
-import Home from './Home';
-import NavBar from './Navbar';
-import Cart from './Cart';
-import Footer from './Footer';
-import SignIn from './SignIn';
-import Payment from './Payment';
+import Header from './components/Header';
+import Home from './components/Home';
+import NavBar from './components/Navbar';
+import Cart from './components/Cart';
+import Footer from './components/Footer';
+import SignIn from './components/SignIn';
+import Payment from './components/Payment';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import {auth} from './firebase';
+import {auth} from './firebase/firebase';
 import React,{useEffect} from 'react';
-import { useStateValue } from './stateProvider';
+import { useStateValue } from './config/stateProvider';
 
 function App() {
   const [,dispatch]=useStateValue();

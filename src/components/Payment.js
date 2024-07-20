@@ -1,7 +1,7 @@
 import React from 'react'
-import './styles/Payment.css';
+import '../styles/Payment.css';
 import BasketItem from './BasketItem';
-import { useStateValue } from '../stateProvider';
+import { useStateValue } from '../config/stateProvider';
 
 function Payment() {
     const [{basket,user}]=useStateValue();

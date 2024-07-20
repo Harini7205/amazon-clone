@@ -1,12 +1,12 @@
 import React from 'react'
-import './styles/Header.css';
-import india from './assets/india.jpg';
+import '../styles/Header.css';
+import india from '../assets/india.jpg';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {Link} from "react-router-dom";
-import { useStateValue } from '../stateProvider';
+import { useStateValue } from '../config/stateProvider';
 import {auth} from '../firebase/firebase';
 
 

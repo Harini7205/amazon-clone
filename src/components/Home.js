@@ -1,6 +1,6 @@
 import React from 'react'
-import './styles/Home.css';
-import productdet from '../homeProduct.json';
+import '../styles/Home.css';
+import productdet from '../data/homeProduct.json';
 import Component from './Component';
 import Carousel from './Carousel';
 
