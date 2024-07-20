@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css';
+import './styles/Header.css';
 import india from './assets/india.jpg';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';

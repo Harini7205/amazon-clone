@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css';
+import './styles/Home.css';
 import productdet from './homeProduct.json';
 import Component from './Component';
 import Carousel from './Carousel';

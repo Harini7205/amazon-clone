@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import './Navbar.css';
+import './styles/Navbar.css';
 
 function Navbar() {
   return (

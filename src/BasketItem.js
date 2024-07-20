@@ -1,5 +1,5 @@
 import React from 'react'
-import './BasketItem.css';
+import './styles/BasketItem.css';
 import StarRating from './StarRating';
 import { useStateValue } from './stateProvider';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './StarRating.css'; // Assuming you have some CSS for styling the stars
+import './styles/StarRating.css'; 
 
 const StarRating = ({ rating }) => {
   return (

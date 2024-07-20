@@ -1,5 +1,5 @@
 import React from 'react'
-import './Component.css';
+import './styles/Component.css';
 
 function Component({heading,images,subtitles,next}) {
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
-import './Cart.css';
+import './styles/Cart.css';
 import Product from './Product';
 import recentProducts from './recentHistory.json';
 import { useStateValue } from './stateProvider';
 import { getBasketTotal } from './reducer';
 import BasketItem from './BasketItem';
+import {useNavigate} from "react-router-dom";
 
 function formatCurrency(value) {
   const numberValue = parseFloat(value);
@@ -16,7 +17,8 @@ function formatCurrency(value) {
 }
 
 function Cart() {
-  const [{basket}]=useStateValue();
+  const navigate=useNavigate();
+  const [{basket,user}]=useStateValue();
   console.log('Basket:', basket);
   console.log('Total:', getBasketTotal(basket));
   const isCartEmpty=(basket.length===0);
@@ -30,10 +32,13 @@ function Cart() {
           <div className="empty-cart">
             <h2>Your Amazon Cart is empty</h2>
             <p className="blue-subtitle">Shop today's deals</p>
+            {(!user)?
             <div className="buttons">
-              <button className="prod-signin yellow-button">Sign In to Your Account</button>
-              <button className="prod-signup white-button">Sign Up Now</button>
-            </div>
+              <button className="prod-signin yellow-button" onClick={e=>navigate("/login")}>Sign In to Your Account</button>
+              <button className="prod-signup white-button" onClick={e=>navigate("/login")}>Sign Up Now</button>
+            </div> 
+            : null
+            }            
           </div>
           </div>
         ):
@@ -71,7 +76,7 @@ function Cart() {
             <div className="subtotal">
               <p>Subtotal ({basket.length} {basket.length > 1 ? 'items' : 'item'}): <strong>{formattedValue}</strong></p>
               <small><input type="checkbox" />This order contains a gift</small>
-              <button className="yellow-button">Proceed to Buy</button>
+              <button className="yellow-button" onClick={e=>navigate('/payment')}>Proceed to Buy</button>
             </div>
             <div className='cart-right-bottom'>
             <h3>Customers who bought items in your Recent History also bought</h3>

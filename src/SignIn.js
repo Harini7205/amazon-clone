@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './SignIn.css';
+import './styles/SignIn.css';
 import {useNavigate} from "react-router-dom";
 import {auth} from './firebase';
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth';
@@ -21,7 +21,6 @@ function SignIn() {
   }
   const register=e=>{
     e.preventDefault();
-    
     createUserWithEmailAndPassword(auth,email,password)
     .then((auth)=>{
       console.log(auth);

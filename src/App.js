@@ -1,10 +1,11 @@
-import './App.css';
+import './styles/App.css';
 import Header from './Header';
 import Home from './Home';
 import NavBar from './Navbar';
 import Cart from './Cart';
 import Footer from './Footer';
 import SignIn from './SignIn';
+import Payment from './Payment';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import {auth} from './firebase';
 import React,{useEffect} from 'react';
@@ -53,6 +54,11 @@ function App() {
           <NavBar />
           <Cart />
           <Footer />
+          </>
+        } />
+        <Route path="/payment" element={
+          <>
+          <Payment />
           </>
         } />
       </Routes>

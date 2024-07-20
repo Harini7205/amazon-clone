@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import './Carousel.css';
+import './styles/Carousel.css';
 
 const images=[
   "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg",

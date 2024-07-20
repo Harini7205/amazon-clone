@@ -1,9 +1,9 @@
 import React from 'react'
 import StarRating from './StarRating';
 import { useStateValue } from './stateProvider';
-import './Product.css';
+import './styles/Product.css';
 
-function Product({id,title,image,rate,rating,reviews}) {
+function Product({id,title,image,rate,rating}) {
   const [{basket},dispatch]=useStateValue(); 
   console.log('this is the basket',basket);
   const addToCart= ()=>{
