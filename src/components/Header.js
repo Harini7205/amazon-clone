@@ -6,8 +6,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {Link} from "react-router-dom";
-import { useStateValue } from './stateProvider';
-import {auth} from './firebase';
+import { useStateValue } from '../stateProvider';
+import {auth} from '../firebase/firebase';
 
 
 function Header() {

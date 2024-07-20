@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/BasketItem.css';
 import StarRating from './StarRating';
-import { useStateValue } from './stateProvider';
+import { useStateValue } from '../config/stateProvider';
 
 function BasketItem({id,image,title,rating,rate}) {
     const [,dispatch]=useStateValue();

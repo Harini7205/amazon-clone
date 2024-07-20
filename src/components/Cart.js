@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/Cart.css';
-import Product from './Product';
-import recentProducts from './recentHistory.json';
-import { useStateValue } from './stateProvider';
-import { getBasketTotal } from './reducer';
+import Product from '../Product';
+import recentProducts from '../recentHistory.json';
+import { useStateValue } from '../config/stateProvider';
+import { getBasketTotal } from '../config/reducer';
 import BasketItem from './BasketItem';
 import {useNavigate} from "react-router-dom";
 
