@@ -74,6 +74,9 @@
     font-size:22px;
     font-weight:700;
 }
+.payment-subtotal button{
+    align-self:flex-start;
+}
 .payment-subtotal p{
     display:flex;
     justify-content: space-between;

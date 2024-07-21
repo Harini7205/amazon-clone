@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import '../styles/Cart.css';
 import Product from './Product';
 import recentProducts from '../data/recentHistory.json';
@@ -6,6 +6,8 @@ import { useStateValue } from '../config/stateProvider';
 import { getBasketTotal } from '../config/reducer';
 import BasketItem from './BasketItem';
 import {useNavigate} from "react-router-dom";
+import {doc,setDoc,collection,getDoc} from 'firebase/firestore';
+import { db } from '../firebase/firebase';
 
 function formatCurrency(value) {
   const numberValue = parseFloat(value);
@@ -19,10 +21,38 @@ function formatCurrency(value) {
 function Cart() {
   const navigate=useNavigate();
   const [{basket,user}]=useStateValue();
+  const [cartItems,setCartItems]=useState([]);
   console.log('Basket:', basket);
   console.log('Total:', getBasketTotal(basket));
-  const isCartEmpty=(basket.length===0);
-  const formattedValue = formatCurrency(getBasketTotal(basket));
+  const isCartEmpty=(cartItems.length===0);
+  useEffect(() => {
+    if (user) {
+      const cartRef = doc(db, 'cart', user.uid);
+      setDoc(cartRef, { userid:user.uid, items: basket }, { merge: true }).catch(error => {
+        console.error("Error updating cart: ", error);
+      });
+    }
+  }, [basket,user]);
+  useEffect(()=>{
+    const fetchCartItems=async ()=>{
+    if (user){
+      try{
+        const docRef=doc(collection(db,'cart'),user.uid);
+        const documents=await getDoc(docRef);
+        if (documents.exists){
+          setCartItems(documents.data().items || []);
+        }
+        else{
+          console.log("No documents exists");
+        }
+      } catch (error){
+        console.log(error);
+      }       
+    }
+  };
+  fetchCartItems();
+},[basket,user]);
+  const formattedValue = formatCurrency(getBasketTotal(cartItems));
   return (
     <div className="cart-page">
       <div className="cart-left">
@@ -44,9 +74,9 @@ function Cart() {
         ):
           <div className="cart-top-left notempty">
             <h2>Shopping Cart</h2>
-            <h4>{basket.length} {basket.length>1?'items':'item'}</h4>
+            <h4>{cartItems.length} {cartItems.length>1?'items':'item'}</h4>
             <div className="basket-items">
-            {basket.map((item) => (
+            {cartItems.map((item) => (
                   <BasketItem id={item.id} image={item.image} title={item.title} rate={item.price} rating={item.rating} />
             ))}
             </div> 
@@ -74,7 +104,7 @@ function Cart() {
         (
           <div className="cart-right">
             <div className="subtotal">
-              <p>Subtotal ({basket.length} {basket.length > 1 ? 'items' : 'item'}): <strong>{formattedValue}</strong></p>
+              <p>Subtotal ({cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}): <strong>{formattedValue}</strong></p>
               <small><input type="checkbox" />This order contains a gift</small>
               <button className="yellow-button" onClick={e=>navigate('/payment')}>Proceed to Buy</button>
             </div>

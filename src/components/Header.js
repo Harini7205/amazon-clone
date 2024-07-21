@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import '../styles/Header.css';
 import india from '../assets/india.jpg';
 import SearchIcon from '@mui/icons-material/Search';
@@ -7,7 +7,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {Link} from "react-router-dom";
 import { useStateValue } from '../config/stateProvider';
-import {auth} from '../firebase/firebase';
+import {auth,db} from '../firebase/firebase';
+import { doc,collection, getDoc} from 'firebase/firestore';
 
 
 function Header() {
@@ -17,6 +18,24 @@ function Header() {
       auth.signOut();
     }
   }
+  const [userName,setUserName]=useState('');
+  useEffect(()=>{
+    if (user){
+      console.log(user.uid);
+      const docRef=doc(collection(db,'users'),user.uid);
+      getDoc(docRef).then(doc=>{
+        if (doc.exists){
+          const docData=doc.data();
+          setUserName(docData.Name);
+        }
+        else{
+          console.log("No document");
+        }
+      }).catch(error=>{
+        console.log(error);
+      });
+    }
+  },[user]);
   return (
     <div className="header">
       <div className="logo bordered">
@@ -42,8 +61,8 @@ function Header() {
         </div>
         <Link to={!user && "/login"}>
         <div onClick={handleAuthentication} className="header_option bordered">
-            <p className="text1">Hello, {user?"sign out": "sign in"}</p>
-            <p className="text2">Accounts & Lists</p>
+            <p className="text1">Hello, {(user && userName) || "Guest"}</p>
+            <p className="text2">{user?"Sign out": "Sign in"}</p>
         </div>
         </Link>
         <div className="header_option bordered">
