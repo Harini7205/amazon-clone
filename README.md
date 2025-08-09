@@ -2,10 +2,6 @@
 
 This is an Amazon Web Application Clone made using React.js and Firebase.
 
-## Live Demo
-
-View the website here: [Amazon Clone](https://clone-fa401.web.app/)
-
 ## Table of Contents
 
 - [Features](#features)
